@@ -1481,6 +1481,14 @@
     "verificada": false
   },
   {
+    "fecha": "07-07",
+    "anio": 1486,
+    "texto": "7 de julio de 1486, los Reyes Católicos expiden en Córdoba la Pragmática que manda observar y guardar el Cuaderno de las Leyes Nuevas de la Santa Hermandad.",
+    "fuente": "https://es.wikipedia.org/wiki/7_de_julio",
+    "origen": "wikipedia",
+    "verificada": true
+  },
+  {
     "fecha": "07-10",
     "anio": 1872,
     "texto": "10 de julio de 1872, es nombrado como alcalde de Córdoba el comerciante Carlos Barrena Breñosa, que permanecería en el cargo hasta 1873.",
@@ -1598,6 +1606,22 @@
     "texto": "26 de julio de 1856, el Gobernador Civil de la provincia, D. Martín de Colmenares, emite un bando según el cual, disuelta la Milicia Nacional, prohíbe el uso de sus prendas o insignias de la misma así como la entrega de las armas.",
     "fuente": "",
     "origen": "hoja",
+    "verificada": true
+  },
+  {
+    "fecha": "07-27",
+    "anio": 852,
+    "texto": "27 de julio de 852, son martirizados en Córdoba los santos Aurelio y Natalia, junto a Félix, Liliosa y el monje Jorge, dentro de los conocidos como Mártires de Córdoba.",
+    "fuente": "https://es.wikipedia.org/wiki/Aurelio_de_C%C3%B3rdoba",
+    "origen": "wikipedia",
+    "verificada": true
+  },
+  {
+    "fecha": "07-27",
+    "anio": 1936,
+    "texto": "27 de julio de 1936, en el contexto de la guerra civil, la aviación republicana bombardea Córdoba en un intento de recuperarla del bando sublevado.",
+    "fuente": "https://es.wikipedia.org/wiki/27_de_julio",
+    "origen": "wikipedia",
     "verificada": true
   },
   {
@@ -1857,6 +1881,14 @@
     "verificada": true
   },
   {
+    "fecha": "09-01",
+    "anio": 1453,
+    "texto": "1 de septiembre de 1453, nace en el castillo de Montilla Gonzalo Fernández de Córdoba, más conocido como el Gran Capitán.",
+    "fuente": "https://es.wikipedia.org/wiki/Gonzalo_Fern%C3%A1ndez_de_C%C3%B3rdoba",
+    "origen": "wikipedia",
+    "verificada": true
+  },
+  {
     "fecha": "09-02",
     "anio": 1342,
     "texto": "2 de septiembre de 1342, Alfonso XI dona la villa de Palma del Río a Egidio Bocanegra, convirtiéndose entonces en señorío de los Bocanegra.",
@@ -1969,6 +2001,14 @@
     "verificada": true
   },
   {
+    "fecha": "09-16",
+    "anio": 852,
+    "texto": "16 de septiembre de 852, son condenados a muerte los monjes Rogelio y Servideo por haber predicado el Evangelio en la Mezquita de Córdoba. Forman parte de los conocidos como Mártires de Córdoba.",
+    "fuente": "https://es.wikipedia.org/wiki/Rogelio_de_%C3%8Dllora",
+    "origen": "wikipedia",
+    "verificada": true
+  },
+  {
     "fecha": "09-17",
     "anio": 853,
     "texto": "17 de septiembre de 853, Santa Columba, tras conocer que unas monjas cordobesas habían sufrido martirio en una plaza cordobesa, se dirige a la misma y comienza a profesar su fe, siendo detenida y decapitada y su cuerpo arrojado al Guadalquivir.",
@@ -1998,6 +2038,14 @@
     "texto": "21 de septiembre de 1591, fallece en Córdoba el humanista cordobés D. Ambrosio de Morales. Nacido en 1513 fue profesor en la universidad de Alcalá de Henares y cronista de Castilla desde 1563.",
     "fuente": "",
     "origen": "hoja",
+    "verificada": true
+  },
+  {
+    "fecha": "09-22",
+    "anio": 852,
+    "texto": "22 de septiembre de 852, fallece en Córdoba Abderramán II, cuarto emir omeya de Córdoba, que reinaba desde el 25 de mayo de 822.",
+    "fuente": "https://es.wikipedia.org/wiki/Abderram%C3%A1n_II",
+    "origen": "wikipedia",
     "verificada": true
   },
   {
@@ -2558,6 +2606,22 @@
     "texto": "1 de diciembre de 1901, se funda en el barrio de S. Lorenzo, en Córdoba, el colegio Salesiano. Ubicado sobre la teneduría y huerta de la Calle Mayor de S. Lorenzo gracias a la promoción de D. Mariano Amaya Castellano y D. Francisco Romero.",
     "fuente": "",
     "origen": "hoja",
+    "verificada": true
+  },
+  {
+    "fecha": "12-02",
+    "anio": 1023,
+    "texto": "2 de diciembre de 1023, los cordobeses expulsan del trono a la dinastía hammudí y eligen califa a Abderramán V, hermano del que fuera cuarto califa cordobés, Muhammad II.",
+    "fuente": "https://es.wikipedia.org/wiki/Abderram%C3%A1n_V",
+    "origen": "wikipedia",
+    "verificada": true
+  },
+  {
+    "fecha": "12-02",
+    "anio": 1515,
+    "texto": "2 de diciembre de 1515, muere en Loja (Granada) Gonzalo Fernández de Córdoba, el Gran Capitán.",
+    "fuente": "https://es.wikipedia.org/wiki/Gonzalo_Fern%C3%A1ndez_de_C%C3%B3rdoba",
+    "origen": "wikipedia",
     "verificada": true
   },
   {
