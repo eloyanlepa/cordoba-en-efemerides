@@ -1,0 +1,66 @@
+[
+  {
+    "fecha": "06-29",
+    "anio": 1236,
+    "titulo": "Fernando III conquista Córdoba",
+    "texto": "Las tropas de Fernando III de Castilla entran en Córdoba, que pasa a formar parte del Reino de Castilla tras más de cinco siglos de dominio andalusí.",
+    "fuente": "https://es.wikipedia.org/wiki/Fernando_III_de_Castilla",
+    "verificada": false
+  },
+  {
+    "fecha": "07-01",
+    "anio": 2018,
+    "titulo": "Medina Azahara, Patrimonio Mundial",
+    "texto": "La UNESCO inscribe la ciudad califal de Medina Azahara en la Lista del Patrimonio Mundial.",
+    "fuente": "https://es.wikipedia.org/wiki/Medina_Azahara",
+    "verificada": false
+  },
+  {
+    "fecha": "07-04",
+    "anio": 1917,
+    "titulo": "Nace Manolete",
+    "texto": "Nace en Córdoba Manuel Laureano Rodríguez Sánchez, «Manolete», una de las grandes figuras de la historia del toreo.",
+    "fuente": "https://es.wikipedia.org/wiki/Manolete",
+    "verificada": false
+  },
+  {
+    "fecha": "07-11",
+    "anio": 1561,
+    "titulo": "Nace Luis de Góngora",
+    "texto": "Nace en Córdoba el poeta Luis de Góngora y Argote, máximo exponente del culteranismo del Siglo de Oro.",
+    "fuente": "https://es.wikipedia.org/wiki/Luis_de_G%C3%B3ngora",
+    "verificada": false
+  },
+  {
+    "fecha": "05-23",
+    "anio": 1627,
+    "titulo": "Muere Luis de Góngora",
+    "texto": "Fallece en su Córdoba natal el poeta Luis de Góngora.",
+    "fuente": "https://es.wikipedia.org/wiki/Luis_de_G%C3%B3ngora",
+    "verificada": false
+  },
+  {
+    "fecha": "09-28",
+    "anio": 1868,
+    "titulo": "Batalla del puente de Alcolea",
+    "texto": "Junto al puente de Alcolea, los militares sublevados derrotan a las tropas fieles a Isabel II, lo que pone fin a su reinado.",
+    "fuente": "https://es.wikipedia.org/wiki/Batalla_del_puente_de_Alcolea_(1868)",
+    "verificada": false
+  },
+  {
+    "fecha": "11-09",
+    "anio": 1874,
+    "titulo": "Nace Julio Romero de Torres",
+    "texto": "Nace en Córdoba el pintor Julio Romero de Torres, célebre por sus retratos de la mujer andaluza.",
+    "fuente": "https://es.wikipedia.org/wiki/Julio_Romero_de_Torres",
+    "verificada": false
+  },
+  {
+    "fecha": "05-10",
+    "anio": 1930,
+    "titulo": "Muere Julio Romero de Torres",
+    "texto": "Fallece en Córdoba el pintor Julio Romero de Torres.",
+    "fuente": "https://es.wikipedia.org/wiki/Julio_Romero_de_Torres",
+    "verificada": false
+  }
+]
