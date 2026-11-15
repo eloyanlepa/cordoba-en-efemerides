@@ -58,7 +58,7 @@
   {
     "fecha": "01-08",
     "anio": 1468,
-    "texto": "8 de enero de 1468, D. Alonso de Aguilar, hermano mayor de Gonzalo Fernández de Córdoba, organiza diversas revueltas contra el rey Fernando IV apoyando a los rebeldes del infante Alfonso. Este hecho hizo que El Gran Capitán entrara a formar parte del séquito del infante.",
+    "texto": "8 de enero de 1468, D. Alonso de Aguilar, hermano mayor de Gonzalo Fernández de Córdoba, organiza diversas revueltas contra el rey Enrique IV apoyando a los rebeldes del infante Alfonso. Este hecho hizo que El Gran Capitán entrara a formar parte del séquito del infante.",
     "fuente": "",
     "origen": "hoja",
     "verificada": true
@@ -394,7 +394,7 @@
   {
     "fecha": "02-19",
     "anio": 1430,
-    "texto": "19 de febrero de 1430, fallece en el convento de Santo Domingo de Scala Coeli D. Álvaro López de Córdoba y Carrill, S. Álvaro de Córdoba. Confesor de D.ª Catalina de Lancaster y del rey Juan II. A pesar de ser conocido como santo solo ha sido beatificado.",
+    "texto": "19 de febrero de 1430, fallece en el convento de Santo Domingo de Scala Coeli D. Álvaro López de Córdoba y Carrillo, S. Álvaro de Córdoba. Confesor de D.ª Catalina de Lancaster y del rey Juan II. A pesar de ser conocido como santo solo ha sido beatificado.",
     "fuente": "",
     "origen": "hoja",
     "verificada": true
@@ -677,7 +677,7 @@
     "texto": "26 de marzo de 1738, el Cabildo de Córdoba aprueba el diseño del pintor D. Domingo Esgroijs y del escultor D. Simón Martínez para la construcción del Triunfo de S. Rafael de la Puerta del Puente. La obra no finalizaría hasta 1781.",
     "fuente": "",
     "origen": "hoja",
-    "verificada": true
+    "verificada": false
   },
   {
     "fecha": "03-27",
@@ -1273,8 +1273,8 @@
   },
   {
     "fecha": "06-08",
-    "anio": 1864,
-    "texto": "8 de junio de 1864, fallece en S. José de Costa Rica el abogado, historiador, profesor, político y diplomático cordobés D. Antonio Jaén Morente.",
+    "anio": 1964,
+    "texto": "8 de junio de 1964, fallece en S. José de Costa Rica el abogado, historiador, profesor, político y diplomático cordobés D. Antonio Jaén Morente.",
     "fuente": "",
     "origen": "hoja",
     "verificada": true
@@ -1389,7 +1389,7 @@
     "texto": "22 de junio de 1771, fallece el obispo de Córdoba D. Martín de Barcia que había impulsado la construcción del triunfo de S. Rafael de la puerta del puente. Tras su fallecimiento se detuvo la obra finalizándose en 1881.",
     "fuente": "",
     "origen": "hoja",
-    "verificada": true
+    "verificada": false
   },
   {
     "fecha": "06-23",
@@ -1446,14 +1446,6 @@
     "texto": "Las tropas de Fernando III de Castilla entran en Córdoba, que pasa a formar parte del Reino de Castilla tras más de cinco siglos de dominio andalusí.",
     "fuente": "https://es.wikipedia.org/wiki/Fernando_III_de_Castilla",
     "verificada": false
-  },
-  {
-    "fecha": "06-29",
-    "anio": 2018,
-    "texto": "29 de junio de 2018, inicio esta serie de tuits animado por @Glizpav y con él finalizo un año de efemérides en Twitter. Gracias a todos. https://twitter.com/eloyanlepa/status/1012569870767198209",
-    "fuente": "",
-    "origen": "hoja",
-    "verificada": true
   },
   {
     "fecha": "07-01",
@@ -1686,7 +1678,7 @@
     "texto": "6 de agosto de 1818, nace en Córdoba el filósofo y matemático José María Rey Heredia. Obtuvo en 1844 la cátedra de lógica en Ciudad Real. En 1848 logró una nueva cátedra en Madrid. Murió en 1856 en el número 12 de la calle del Duque, actualmente calle Rey Heredia.",
     "fuente": "",
     "origen": "hoja",
-    "verificada": true
+    "verificada": false
   },
   {
     "fecha": "08-07",
@@ -1865,14 +1857,6 @@
     "verificada": true
   },
   {
-    "fecha": "09-01",
-    "anio": 1453,
-    "texto": "1 de septiembre de 1453, nace en Córdoba Gonzalo Fernández de Córdoba, más conocido como el Gran Capitán. Al servicio de los Reyes Católicos inició la reorganización del ejército de su época que finalizó con la creación de los Tercios.",
-    "fuente": "",
-    "origen": "hoja",
-    "verificada": true
-  },
-  {
     "fecha": "09-02",
     "anio": 1342,
     "texto": "2 de septiembre de 1342, Alfonso XI dona la villa de Palma del Río a Egidio Bocanegra, convirtiéndose entonces en señorío de los Bocanegra.",
@@ -1934,7 +1918,7 @@
     "texto": "9 de septiembre de 1862, las calles del Duque y de Santa Clara pasan a tomar el nombre de José María Rey Heredia, en honor al insigne filósofo fallecido el año anterior.",
     "fuente": "",
     "origen": "hoja",
-    "verificada": true
+    "verificada": false
   },
   {
     "fecha": "09-10",
@@ -2012,14 +1996,6 @@
     "fecha": "09-21",
     "anio": 1591,
     "texto": "21 de septiembre de 1591, fallece en Córdoba el humanista cordobés D. Ambrosio de Morales. Nacido en 1513 fue profesor en la universidad de Alcalá de Henares y cronista de Castilla desde 1563.",
-    "fuente": "",
-    "origen": "hoja",
-    "verificada": true
-  },
-  {
-    "fecha": "09-22",
-    "anio": 822,
-    "texto": "22 de septiembre de 822, fallece el cuarto emir del califato de Córdoba, Abderramán II. Accedió al poder el 25 de mayo de 822 y durante su mandato se amplió la mezquita de Córdoba hacia el sur y se enfrentó, entre otros a los Vikingos a los que venció en Sevilla.",
     "fuente": "",
     "origen": "hoja",
     "verificada": true
@@ -2585,14 +2561,6 @@
     "verificada": true
   },
   {
-    "fecha": "12-02",
-    "anio": 1515,
-    "texto": "2 de diciembre de 1515, muere en Loja (Granada) Gonzalo Fernández de Córdoba, El Gran Capitán. Nacido en Montilla, las reformas por él introducidas en el ejército de la época acabaron convirtiéndolo en el impulsor de los Tercios.",
-    "fuente": "",
-    "origen": "hoja",
-    "verificada": true
-  },
-  {
     "fecha": "12-03",
     "anio": 1895,
     "texto": "3 de diciembre de 1895, la alcaldía de Córdoba emite un primer decreto para alinear la plaza de las Tendillas de Calatrava bajo el proyecto de Patricio de Bolomburu. El objetivo era crear una céntrica plaza pero los problemas económicos no permitirían retomarlo definitivamente hasta 1907 hasta su finalización en 1925.",
@@ -2676,14 +2644,6 @@
     "fecha": "12-13",
     "anio": 1714,
     "texto": "13 de diciembre de 1714, finaliza el litigio que se había emprendido contra los ermitaños de Córdoba por la propiedad de parte de los terrenos sobre los que se habían asentado en el conocido como Cerro de la Cárcel en el Desierto de Ntra. Sra. de Belén.",
-    "fuente": "",
-    "origen": "hoja",
-    "verificada": true
-  },
-  {
-    "fecha": "12-14",
-    "anio": 1962,
-    "texto": "14 de diciembre de 1962, el pleno municipal aprueba la construcción de un centro comercial sobre la antigua plaza de toros de Ronda de los Tejares, aunque la misma aún continuaría ofreciendo corridas hasta el 18 de abril de 1965. Finalmente se construiría Galerías Preciados en el año 1960 sobre dichos terrenos.",
     "fuente": "",
     "origen": "hoja",
     "verificada": true
