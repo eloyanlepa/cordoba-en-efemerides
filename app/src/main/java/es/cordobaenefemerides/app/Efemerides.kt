@@ -6,12 +6,19 @@ import java.time.LocalDate
 
 data class Efemeride(
     val fecha: String,      // "MM-DD"
-    val anio: Int,
-    val titulo: String,
+    val anio: Int,          // negativo = antes de Cristo
+    val titulo: String,     // puede estar vacío
     val texto: String,
     val fuente: String,
     val verificada: Boolean,
-)
+    val extra: String = "",
+) {
+    /** El año tal como se muestra: «1236» o «45 a. C.». */
+    val anioTexto: String get() = if (anio < 0) "${-anio} a. C." else anio.toString()
+
+    /** Frase corta para el aviso: el título, o el comienzo del texto si no hay título. */
+    val resumen: String get() = titulo.ifBlank { texto }
+}
 
 object Efemerides {
     @Volatile private var cache: List<Efemeride>? = null
@@ -34,10 +41,11 @@ object Efemerides {
             Efemeride(
                 fecha = o.getString("fecha"),
                 anio = o.getInt("anio"),
-                titulo = o.getString("titulo"),
+                titulo = o.optString("titulo"),
                 texto = o.getString("texto"),
                 fuente = o.optString("fuente"),
                 verificada = o.optBoolean("verificada", false),
+                extra = o.optString("extra"),
             )
         }
     }

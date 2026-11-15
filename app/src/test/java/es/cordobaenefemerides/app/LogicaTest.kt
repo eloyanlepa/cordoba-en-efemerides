@@ -25,3 +25,11 @@ class LogicaTest {
         assertEquals(Duration.ofHours(24), r)
     }
 }
+
+class FormatoTest {
+    @Test fun anioAntesDeCristo() {
+        val e = Efemeride("03-17", -45, "", "Batalla de Munda", "", true)
+        assertEquals("45 a. C.", e.anioTexto)
+        assertEquals("Batalla de Munda", e.resumen)
+    }
+}
