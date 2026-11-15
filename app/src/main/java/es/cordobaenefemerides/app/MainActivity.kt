@@ -150,14 +150,24 @@ fun TarjetaEfemeride(e: Efemeride) {
     Card(Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp)) {
             Text(
-                e.anio.toString(),
+                e.anioTexto,
                 style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.Bold,
             )
-            Text(e.titulo, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+            if (e.titulo.isNotBlank()) {
+                Text(e.titulo, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+            }
             Spacer(Modifier.height(6.dp))
             Text(e.texto, style = MaterialTheme.typography.bodyMedium)
+            if (e.extra.isNotBlank()) {
+                Spacer(Modifier.height(6.dp))
+                Text(
+                    e.extra,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (e.fuente.isNotBlank()) {
                     TextButton(onClick = { enlaces.openUri(e.fuente) }) { Text("Ver fuente") }

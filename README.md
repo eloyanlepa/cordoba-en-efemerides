@@ -25,7 +25,19 @@ Cada efeméride tiene este aspecto:
 ```
 
 - `fecha`: mes y día, en formato `MM-DD`.
+- `anio`: el año. Para fechas antes de Cristo, en negativo (por ejemplo `-45`).
+- `titulo` es opcional; si no hay, el aviso muestra el comienzo del texto.
 - `verificada`: pon `true` cuando hayas comprobado la fecha en una fuente fiable. Mientras sea `false`, la app la muestra como «Pendiente de verificar».
+
+## Importar la hoja de cálculo
+
+Las efemérides de la hoja «Efemérides de Córdoba» se importan así (exportando antes la hoja como CSV):
+
+```bash
+python3 herramientas/importar_hoja.py hoja.csv data/efemerides.json
+```
+
+Se puede repetir cuando la hoja cambie: sustituye las efemérides que venían de la hoja y conserva las demás.
 
 ## Compilar en tu ordenador (opcional)
 

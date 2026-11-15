@@ -69,14 +69,16 @@ object AvisoDiario {
             .setAutoCancel(true)
             .apply {
                 if (delDia.size == 1) {
-                    setContentTitle("Tal día como hoy, en ${primera.anio}")
-                    setContentText(primera.titulo)
-                    setStyle(NotificationCompat.BigTextStyle().bigText("${primera.titulo}. ${primera.texto}"))
+                    setContentTitle("Tal día como hoy, en ${primera.anioTexto}")
+                    setContentText(primera.resumen)
+                    val completo = if (primera.titulo.isBlank()) primera.texto
+                        else "${primera.titulo}. ${primera.texto}"
+                    setStyle(NotificationCompat.BigTextStyle().bigText(completo))
                 } else {
                     setContentTitle("${delDia.size} efemérides hoy en Córdoba")
-                    setContentText("${primera.anio}: ${primera.titulo}")
+                    setContentText("${primera.anioTexto}: ${primera.resumen}")
                     setStyle(NotificationCompat.InboxStyle().also { s ->
-                        delDia.forEach { s.addLine("${it.anio}: ${it.titulo}") }
+                        delDia.forEach { s.addLine("${it.anioTexto}: ${it.resumen}") }
                     })
                 }
             }
