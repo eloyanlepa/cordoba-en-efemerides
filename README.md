@@ -42,6 +42,8 @@ python3 herramientas/video.py videos/guiones/11-16-1830.json
 
 Sale en `videos/salida/` (vertical, 1080×1920, 30 segundos, sin música para poder añadirla en Instagram).
 
+Si el guion incluye `"final": "videos/recursos/cierre.mp4"`, el vídeo termina con ese cierre (el logo animado de Córdoba en Efemérides, con su sonido) en lugar de la diapositiva final.
+
 Cuando el vídeo esté publicado, su enlace se añade a la efeméride con el campo `"video"` y la app muestra el botón «▶ Ver vídeo».
 
 ## Importar la hoja de cálculo

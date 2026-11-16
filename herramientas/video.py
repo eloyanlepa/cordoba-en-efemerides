@@ -9,6 +9,8 @@ El guion es un JSON con:
     diapositivas lista de frases cortas que aparecen en pantalla, una tras otra
     voz          (opcional) texto para leer en voz alta mientras se ve el vídeo
     pie          (opcional) texto para la publicación de Instagram
+    final        (opcional) vídeo de cierre propio, relativo a la raíz del proyecto
+                 (por ejemplo "videos/recursos/cierre.mp4"); sustituye a la diapositiva final
 
 El vídeo se guarda en videos/salida/MM-DD-AAAA.mp4 (esa carpeta no se sube a GitHub).
 Necesita Python con Pillow y ffmpeg.
@@ -137,13 +139,14 @@ def cierre():
     return img
 
 
-def clip(img, segundos, ruta_png, ruta_mp4):
+def clip(img, segundos, ruta_png, ruta_mp4, fundido_final=True):
     img.save(ruta_png)
     marcos = int(segundos * FPS)
+    fundido = f",fade=t=out:st={segundos - 0.4}:d=0.4" if fundido_final else ""
     filtro = (
         f"scale={ANCHO * 2}:-1,"
         f"zoompan=z='1+0.04*on/{marcos}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={marcos}:s={ANCHO}x{ALTO}:fps={FPS},"
-        f"fade=t=in:st=0:d=0.4,fade=t=out:st={segundos - 0.4}:d=0.4,format=yuv420p"
+        f"fade=t=in:st=0:d=0.4{fundido},format=yuv420p"
     )
     subprocess.run(
         ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", ruta_png, "-t", str(segundos),
@@ -152,15 +155,26 @@ def clip(img, segundos, ruta_png, ruta_mp4):
     )
 
 
+def duracion(ruta):
+    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", ruta],
+                       check=True, capture_output=True, text=True)
+    return float(r.stdout)
+
+
 def main(ruta_guion):
     g = json.load(open(ruta_guion, encoding="utf-8"))
+    raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    final = os.path.join(raiz, g["final"]) if g.get("final") else None
+    FUNDIDO = 0.5  # segundos de transición hacia el vídeo de cierre
+
     diapos = g["diapositivas"]
-    resto = (TOTAL - PORTADA - ANIO - CIERRE) / len(diapos)
+    cierre_seg = duracion(final) - FUNDIDO if final else CIERRE
+    resto = max(3.0, (TOTAL - PORTADA - ANIO - cierre_seg) / len(diapos))
     escenas = [(portada(g["fecha"]), PORTADA), (diapositiva_anio(g["anio"]), ANIO)]
     escenas += [(diapositiva_texto(t), resto) for t in diapos]
-    escenas.append((cierre(), CIERRE))
+    if not final:
+        escenas.append((cierre(), CIERRE))
 
-    raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     salida_dir = os.path.join(raiz, "videos", "salida")
     os.makedirs(salida_dir, exist_ok=True)
     nombre = f"{g['fecha']}-{g['anio']}"
@@ -170,18 +184,38 @@ def main(ruta_guion):
         lista = []
         for i, (img, seg) in enumerate(escenas):
             mp4 = os.path.join(tmp, f"{i:02d}.mp4")
-            clip(img, seg, os.path.join(tmp, f"{i:02d}.png"), mp4)
+            ultima = i == len(escenas) - 1
+            clip(img, seg, os.path.join(tmp, f"{i:02d}.png"), mp4, fundido_final=not (final and ultima))
             lista.append(f"file '{mp4}'")
         portada(g["fecha"]).save(os.path.join(salida_dir, nombre + "-portada.jpg"), quality=92)
         lista_txt = os.path.join(tmp, "lista.txt")
         open(lista_txt, "w").write("\n".join(lista))
         # Se añade una pista de audio en silencio: Instagram permite poner música encima.
+        cuerpo = os.path.join(tmp, "cuerpo.mp4") if final else salida
         subprocess.run(
             ["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lista_txt,
              "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-shortest",
-             "-c:v", "copy", "-c:a", "aac", "-movflags", "+faststart", salida],
+             "-c:v", "copy", "-c:a", "aac", "-movflags", "+faststart", cuerpo],
             check=True,
         )
+        if final:
+            # Une el cuerpo con el vídeo de cierre (adaptado a 1080x1920 y 30 fps) con un fundido.
+            inicio = duracion(cuerpo) - FUNDIDO
+            filtro = (
+                f"[1:v]scale={ANCHO}:{ALTO}:force_original_aspect_ratio=decrease,"
+                f"pad={ANCHO}:{ALTO}:(ow-iw)/2:(oh-ih)/2:white,fps={FPS},setsar=1,format=yuv420p,settb=AVTB[fin];"
+                f"[0:v]fps={FPS},settb=AVTB[cuerpo];"
+                f"[cuerpo][fin]xfade=transition=fade:duration={FUNDIDO}:offset={inicio}[v];"
+                f"[1:a]aformat=sample_rates=44100:channel_layouts=stereo[afin];"
+                f"[0:a][afin]acrossfade=d={FUNDIDO}[a]"
+            )
+            subprocess.run(
+                ["ffmpeg", "-y", "-loglevel", "error", "-i", cuerpo, "-i", final,
+                 "-filter_complex", filtro, "-map", "[v]", "-map", "[a]",
+                 "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-c:a", "aac",
+                 "-movflags", "+faststart", salida],
+                check=True,
+            )
     print(salida)
 
 
