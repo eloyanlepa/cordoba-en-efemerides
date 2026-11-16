@@ -105,8 +105,12 @@ object AvisoDiario {
 
 class AvisoWorker(context: Context, params: WorkerParameters) : Worker(context, params) {
     override fun doWork(): Result {
+        // Antes del aviso se intenta descargar la última versión de las efemérides (si no hay
+        // conexión no pasa nada: se usan las que ya tiene la app).
+        Efemerides.actualizar(applicationContext)
         val hoy = Efemerides.delDia(Efemerides.todas(applicationContext), LocalDate.now())
         AvisoDiario.mostrar(applicationContext, hoy)
+        WidgetEfemeride.actualizarTodos(applicationContext)
         return Result.success()
     }
 }

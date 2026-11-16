@@ -3,9 +3,20 @@
 App para Android que cada día muestra las efemérides de Córdoba (España) y envía un aviso por la mañana.
 Nace del hashtag #CórdobaEnEfemérides.
 
+## Qué hace
+
+- **Hoy**: la efeméride del día, con botones para ir a otros días y elegir la hora del aviso (🔔).
+- **Calendario**: el mes completo; los días con efemérides salen en color y ▶ indica que tienen vídeo.
+- **Buscar**: por palabras (sin importar tildes) y por temas.
+- **Favoritas**: las efemérides marcadas con ☆.
+- **Juego**: «¿En qué año ocurrió?», con racha y récord.
+- **Compartir**: genera una tarjeta con los colores de la app y la envía con su texto a cualquier red social.
+- **Widget** para la pantalla de inicio con la efeméride del día.
+- **Aa**: tamaño de letra.
+
 ## Cómo funciona
 
-- **Las efemérides** están en [`data/efemerides.json`](data/efemerides.json). Es la única fuente de datos: la app las lleva dentro, así que funciona sin internet y sin servidor.
+- **Las efemérides** están en [`data/efemerides.json`](data/efemerides.json). La app las lleva dentro (funciona sin internet) y además, al abrirse y antes del aviso diario, **descarga la última versión de ese archivo desde GitHub**. Así, todo lo que se añada o corrija en la rama `main` llega a los móviles sin reinstalar la app.
 - **El aviso diario** salta hacia las 9:00. Android puede retrasarlo unos minutos para ahorrar batería.
 - **La hora del aviso** se cambia en la propia app, con el botón 🔔.
 - **El botón Compartir** abre el menú de Android para enviar la efeméride a WhatsApp, X, Facebook, Instagram, etc., con el hashtag #CórdobaEnEfemérides.
@@ -30,6 +41,7 @@ Cada efeméride tiene este aspecto:
 - `anio`: el año. Para fechas antes de Cristo, en negativo (por ejemplo `-45`).
 - `titulo` es opcional; si no hay, el aviso muestra el comienzo del texto.
 - `video` es opcional: el enlace al vídeo publicado en Instagram.
+- `temas`: lista de temas (por ejemplo `["Religión", "Monumentos y urbanismo"]`). Los propone `herramientas/temas.py` y se pueden corregir a mano.
 - `verificada`: pon `true` cuando hayas comprobado la fecha en una fuente fiable. Mientras sea `false`, la app la muestra como «Pendiente de verificar».
 
 ## Vídeos para Instagram
@@ -64,4 +76,4 @@ Hace falta Java 17 y el SDK de Android:
 ./gradlew testDebugUnitTest assembleDebug
 ```
 
-La app queda en `app/build/outputs/apk/debug/app-debug.apk`.
+La app queda en `app/build/outputs/apk/debug/app-debug.apk`. Las pruebas guardan capturas de las pantallas en `app/build/capturas/` (en GitHub, en el artefacto «capturas-de-pantalla»).
