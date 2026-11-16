@@ -22,25 +22,41 @@ import java.time.LocalDateTime
 import java.util.concurrent.TimeUnit
 
 object AvisoDiario {
-    /** Hora aproximada del aviso diario (Android puede retrasarlo unos minutos para ahorrar batería). */
-    const val HORA = 9
+    /** Hora del aviso si el usuario no ha elegido otra. Android puede retrasarlo unos minutos para ahorrar batería. */
+    const val HORA_POR_DEFECTO = 9
     private const val CANAL = "efemeride-del-dia"
     private const val TRABAJO = "aviso-diario"
+    private const val PREFS = "ajustes"
 
-    /** Tiempo que falta hasta la próxima vez que sean las [hora]:00. */
-    fun retrasoHasta(ahora: LocalDateTime, hora: Int): Duration {
-        var siguiente = ahora.toLocalDate().atTime(hora, 0)
+    /** Tiempo que falta hasta la próxima vez que sean las [hora]:[minuto]. */
+    fun retrasoHasta(ahora: LocalDateTime, hora: Int, minuto: Int = 0): Duration {
+        var siguiente = ahora.toLocalDate().atTime(hora, minuto)
         if (!siguiente.isAfter(ahora)) siguiente = siguiente.plusDays(1)
         return Duration.between(ahora, siguiente)
     }
 
-    fun programar(context: Context) {
-        val retraso = retrasoHasta(LocalDateTime.now(), HORA)
+    /** Hora y minuto elegidos para el aviso. */
+    fun horaElegida(context: Context): Pair<Int, Int> {
+        val p = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+        return p.getInt("hora", HORA_POR_DEFECTO) to p.getInt("minuto", 0)
+    }
+
+    /** Guarda una nueva hora y vuelve a programar el aviso para esa hora. */
+    fun cambiarHora(context: Context, hora: Int, minuto: Int) {
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
+            .putInt("hora", hora).putInt("minuto", minuto).apply()
+        programar(context, reemplazar = true)
+    }
+
+    fun programar(context: Context, reemplazar: Boolean = false) {
+        val (hora, minuto) = horaElegida(context)
+        val retraso = retrasoHasta(LocalDateTime.now(), hora, minuto)
         val peticion = PeriodicWorkRequestBuilder<AvisoWorker>(1, TimeUnit.DAYS)
             .setInitialDelay(retraso.toMinutes(), TimeUnit.MINUTES)
             .build()
-        WorkManager.getInstance(context)
-            .enqueueUniquePeriodicWork(TRABAJO, ExistingPeriodicWorkPolicy.KEEP, peticion)
+        val politica = if (reemplazar) ExistingPeriodicWorkPolicy.CANCEL_AND_REENQUEUE
+            else ExistingPeriodicWorkPolicy.KEEP
+        WorkManager.getInstance(context).enqueueUniquePeriodicWork(TRABAJO, politica, peticion)
     }
 
     fun crearCanal(context: Context) {

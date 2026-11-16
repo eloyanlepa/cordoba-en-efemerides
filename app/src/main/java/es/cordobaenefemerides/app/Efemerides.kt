@@ -12,12 +12,21 @@ data class Efemeride(
     val fuente: String,
     val verificada: Boolean,
     val extra: String = "",
+    val video: String = "",   // enlace al vídeo de Instagram, si lo hay
 ) {
     /** El año tal como se muestra: «1236» o «45 a. C.». */
     val anioTexto: String get() = if (anio < 0) "${-anio} a. C." else anio.toString()
 
     /** Frase corta para el aviso: el título, o el comienzo del texto si no hay título. */
     val resumen: String get() = titulo.ifBlank { texto }
+
+    /** Texto para compartir en redes sociales. */
+    val textoParaCompartir: String get() = buildString {
+        if (titulo.isNotBlank()) append(titulo).append("\n\n")
+        append(texto)
+        if (video.isNotBlank()) append("\n\n▶ ").append(video)
+        append("\n\n#CórdobaEnEfemérides")
+    }
 }
 
 object Efemerides {
@@ -46,6 +55,7 @@ object Efemerides {
                 fuente = o.optString("fuente"),
                 verificada = o.optBoolean("verificada", false),
                 extra = o.optString("extra"),
+                video = o.optString("video"),
             )
         }
     }

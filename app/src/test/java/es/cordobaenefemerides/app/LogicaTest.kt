@@ -33,3 +33,19 @@ class FormatoTest {
         assertEquals("Batalla de Munda", e.resumen)
     }
 }
+
+class CompartirTest {
+    @Test fun avisoConMinutos() {
+        val r = AvisoDiario.retrasoHasta(LocalDateTime.of(2026, 1, 1, 8, 0), 8, 30)
+        assertEquals(Duration.ofMinutes(30), r)
+    }
+
+    @Test fun textoParaCompartirLlevaVideoYHashtag() {
+        val e = Efemeride("11-16", 1830, "", "16 de noviembre de 1830, algo pasó.", "", true,
+            video = "https://www.instagram.com/reel/abc/")
+        assertEquals(
+            "16 de noviembre de 1830, algo pasó.\n\n▶ https://www.instagram.com/reel/abc/\n\n#CórdobaEnEfemérides",
+            e.textoParaCompartir,
+        )
+    }
+}

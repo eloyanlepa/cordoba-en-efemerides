@@ -1,6 +1,9 @@
 package es.cordobaenefemerides.app
 
 import android.Manifest
+import android.app.TimePickerDialog
+import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -10,6 +13,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -39,6 +44,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -92,6 +98,8 @@ fun Pantalla(todas: List<Efemeride>) {
     var diaTexto by rememberSaveable { mutableStateOf(hoy.toString()) }
     val dia = LocalDate.parse(diaTexto)
     val delDia = remember(dia, todas) { Efemerides.delDia(todas, dia) }
+    val contexto = LocalContext.current
+    var horaAviso by remember { mutableStateOf(AvisoDiario.horaElegida(contexto)) }
 
     Scaffold(
         topBar = {
@@ -118,11 +126,22 @@ fun Pantalla(todas: List<Efemeride>) {
                 )
                 TextButton(onClick = { diaTexto = dia.plusDays(1).toString() }) { Text("Siguiente ›") }
             }
-            if (dia != hoy) {
-                TextButton(
-                    onClick = { diaTexto = hoy.toString() },
-                    modifier = Modifier.align(Alignment.CenterHorizontally),
-                ) { Text("Volver a hoy") }
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
+            ) {
+                if (dia != hoy) {
+                    TextButton(onClick = { diaTexto = hoy.toString() }) { Text("Volver a hoy") }
+                }
+                TextButton(onClick = {
+                    val (h, m) = horaAviso
+                    TimePickerDialog(contexto, { _, nuevaH, nuevaM ->
+                        AvisoDiario.cambiarHora(contexto, nuevaH, nuevaM)
+                        horaAviso = nuevaH to nuevaM
+                    }, h, m, true).show()
+                }) {
+                    Text("🔔 Aviso a las %02d:%02d".format(horaAviso.first, horaAviso.second))
+                }
             }
 
             if (delDia.isEmpty()) {
@@ -144,9 +163,20 @@ fun Pantalla(todas: List<Efemeride>) {
     }
 }
 
+/** Abre el menú de Android para compartir (Instagram, WhatsApp, X, Facebook...). */
+fun compartir(contexto: Context, e: Efemeride) {
+    val envio = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, e.textoParaCompartir)
+    }
+    contexto.startActivity(Intent.createChooser(envio, "Compartir efeméride"))
+}
+
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun TarjetaEfemeride(e: Efemeride) {
     val enlaces = LocalUriHandler.current
+    val contexto = LocalContext.current
     Card(Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp)) {
             Text(
@@ -168,7 +198,11 @@ fun TarjetaEfemeride(e: Efemeride) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            FlowRow(verticalArrangement = Arrangement.Center) {
+                TextButton(onClick = { compartir(contexto, e) }) { Text("Compartir") }
+                if (e.video.isNotBlank()) {
+                    TextButton(onClick = { enlaces.openUri(e.video) }) { Text("▶ Ver vídeo") }
+                }
                 if (e.fuente.isNotBlank()) {
                     TextButton(onClick = { enlaces.openUri(e.fuente) }) { Text("Ver fuente") }
                 }
