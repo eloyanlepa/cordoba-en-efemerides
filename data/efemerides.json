@@ -4143,6 +4143,18 @@
   },
   {
     "fecha": "12-30",
+    "anio": 1853,
+    "texto": "30 de diciembre de 1853, cae sobre Córdoba la mayor nevada que se recordaba: 28 horas seguidas sin parar de nevar. La ciudad amaneció completamente blanca y en patios y plazas la nieve llegó a los segundos pisos. Varios caminos quedaron cortados y en las alamedas públicas se partieron muchísimos árboles.",
+    "fuente": "",
+    "extra": "Fuente: Diario de Córdoba, 1 de enero de 1854.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Sucesos"
+    ]
+  },
+  {
+    "fecha": "12-30",
     "anio": 1854,
     "texto": "30 de diciembre de 1854, se constituye una comisión en Córdoba para elaborar un proyecto que abordara el problema de la eliminación de los arbitrios de consumos y puertas que iban a ser eliminados, quedando libre el acceso a las ciudades.",
     "fuente": "",
