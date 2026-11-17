@@ -68,10 +68,14 @@ object Efemerides {
     fun todas(context: Context): List<Efemeride> =
         cache ?: cargar(context).also { cache = it }
 
-    /** Las efemérides de un día concreto, de la más antigua a la más reciente. */
+    /**
+     * Las efemérides de un día concreto, de la más antigua a la más reciente.
+     * En los años no bisiestos, las del 29 de febrero se muestran el 28.
+     */
     fun delDia(lista: List<Efemeride>, dia: LocalDate): List<Efemeride> {
-        val clave = "%02d-%02d".format(dia.monthValue, dia.dayOfMonth)
-        return lista.filter { it.fecha == clave }.sortedBy { it.anio }
+        val claves = mutableSetOf("%02d-%02d".format(dia.monthValue, dia.dayOfMonth))
+        if (dia.monthValue == 2 && dia.dayOfMonth == 28 && !dia.isLeapYear) claves.add("02-29")
+        return lista.filter { it.fecha in claves }.sortedBy { it.anio }
     }
 
     /**

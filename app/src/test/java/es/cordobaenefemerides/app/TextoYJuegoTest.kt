@@ -47,3 +47,19 @@ class TextoYJuegoTest {
         assertEquals(a.id, a.copy(temas = listOf("Política y gobierno")).id)
     }
 }
+
+class VeintinueveDeFebreroTest {
+    private val lista = listOf(
+        Efemeride("02-28", 1900, "", "Del 28.", "", true),
+        Efemeride("02-29", 1964, "", "Del 29.", "", true),
+    )
+
+    @Test fun enAnioNoBisiestoSaleEl28() {
+        assertEquals(listOf(1900, 1964), Efemerides.delDia(lista, java.time.LocalDate.of(2026, 2, 28)).map { it.anio })
+    }
+
+    @Test fun enAnioBisiestoSaleSuDia() {
+        assertEquals(listOf(1900), Efemerides.delDia(lista, java.time.LocalDate.of(2028, 2, 28)).map { it.anio })
+        assertEquals(listOf(1964), Efemerides.delDia(lista, java.time.LocalDate.of(2028, 2, 29)).map { it.anio })
+    }
+}
