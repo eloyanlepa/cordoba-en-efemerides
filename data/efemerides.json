@@ -2884,6 +2884,44 @@
     ]
   },
   {
+    "fecha": "08-22",
+    "anio": 1915,
+    "texto": "22 de agosto de 1915, se da por extinguido el gran incendio declarado hacia la una de la madrugada en el número 10 de la calle Librería, que llegó a alcanzar la calle Claudio Marcelo. La prensa critica la falta de un buen servicio de bomberos.",
+    "fuente": "",
+    "extra": "Fuente: Diario de Córdoba, 22 y 23 de agosto de 1915.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Sucesos"
+    ]
+  },
+  {
+    "fecha": "08-22",
+    "anio": 1936,
+    "texto": "22 de agosto de 1936, Córdoba sufre dos bombardeos aéreos, a las seis y a las once y media de la mañana, con bombas en la Corredera, la plaza de la República, Claudio Marcelo, las Margaritas y la plaza de toros, entre otras zonas. Muere el portero Apolinar Niza Mena y hay varios heridos.",
+    "fuente": "",
+    "extra": "Fuente: prensa del bando sublevado, 23 de agosto de 1936.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Guerras y conflictos",
+      "Sucesos"
+    ]
+  },
+  {
+    "fecha": "08-22",
+    "anio": 1994,
+    "texto": "22 de agosto de 1994, se cierra la antigua estación de tren en superficie de Córdoba, con el único paso a nivel de la Alta Velocidad en España, para culminar el soterramiento de las vías antes de la apertura de Córdoba Central.",
+    "fuente": "",
+    "extra": "Fuente: revista Carril.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Economía y vida cotidiana",
+      "Monumentos y urbanismo"
+    ]
+  },
+  {
     "fecha": "08-23",
     "anio": 1863,
     "texto": "23 de agosto de 1863, se produce un devastador incendio en el Seminario de San Pelagio. Si bien existieron múltiples teorías sobre el mismo, se cree que se inició en la carbonera, donde por aquellas fechas se había acumulado gran cantidad de combustible.",
