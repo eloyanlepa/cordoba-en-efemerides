@@ -2189,8 +2189,8 @@
   {
     "fecha": "07-03",
     "anio": 1941,
-    "texto": "3 de julio de 1941, muere en Córdoba Ricardo de Montis, escritor, periodista y cronista oficial de la ciudad, autor de las «Notas cordobesas».",
-    "fuente": "",
+    "texto": "3 de julio de 1941, muere en su casa de la calle Blanco Belmonte el escritor y periodista Ricardo de Montis, cronista oficial de Córdoba. Director del Diario de Córdoba desde 1929, reunió en sus «Notas cordobesas» los artículos sobre la ciudad que había publicado en ese periódico. Está enterrado en el cementerio de la Salud.",
+    "fuente": "https://es.wikipedia.org/wiki/Ricardo_de_Montis",
     "extra": "Fuente: Datta Capital / ateneodecordoba.com.",
     "origen": "autor",
     "verificada": true,
@@ -2225,8 +2225,8 @@
   {
     "fecha": "07-06",
     "anio": 1877,
-    "texto": "6 de julio de 1877, nace en Priego de Córdoba Niceto Alcalá-Zamora, que sería el primer presidente de la Segunda República (1931-1936).",
-    "fuente": "",
+    "texto": "6 de julio de 1877, nace en Priego de Córdoba Niceto Alcalá-Zamora. Jurista y político, fue ministro con Alfonso XIII, presidió el Gobierno provisional de la Segunda República y fue su primer presidente, entre 1931 y 1936. Murió en el exilio, en Buenos Aires, en 1949.",
+    "fuente": "https://es.wikipedia.org/wiki/Niceto_Alcal%C3%A1-Zamora",
     "extra": "Fuente: Datta Capital.",
     "origen": "autor",
     "verificada": true,
@@ -2358,7 +2358,7 @@
   {
     "fecha": "07-15",
     "anio": 1508,
-    "texto": "15 de julio de 1508, el Gran Capitán toma posesión de la alcaidía vitalicia de Loja, merced que le concedió Fernando el Católico tras su regreso de Nápoles.",
+    "texto": "15 de julio de 1508, el Gran Capitán toma posesión de la alcaidía vitalicia de Loja, merced que le concedió Fernando el Católico tras su regreso de Nápoles. En esa ciudad pasaría sus últimos años y en ella moriría en 1515.",
     "fuente": "",
     "extra": "Fuente: Enciclopedia Kiddle.",
     "origen": "autor",
@@ -2371,7 +2371,7 @@
   {
     "fecha": "07-15",
     "anio": 1927,
-    "texto": "15 de julio de 1927, comienzan las obras en San Pedro de Alcántara para trasladar allí a las mujeres internadas por enfermedad mental en el Hospital de Agudos.",
+    "texto": "15 de julio de 1927, comienzan las obras en San Pedro de Alcántara para trasladar allí a las mujeres internadas por enfermedad mental en el Hospital de Agudos, el antiguo hospital del Cardenal Salazar, situado en la misma plaza y hoy facultad de Filosofía y Letras.",
     "fuente": "",
     "extra": "Fuente: Diario de Córdoba, 16 de julio de 1927.",
     "origen": "autor",
@@ -2383,7 +2383,7 @@
   {
     "fecha": "07-16",
     "anio": 851,
-    "texto": "16 de julio de 851, es decapitado en Córdoba, bajo el emirato de Abderramán II, el diácono Sisenando, formado en la basílica de San Acisclo y uno de los mártires voluntarios mozárabes.",
+    "texto": "16 de julio de 851, es decapitado en Córdoba, bajo el emirato de Abderramán II, el diácono Sisenando. Natural de Beja, en el actual Portugal, se había formado en la basílica de San Acisclo y es uno de los mártires voluntarios mozárabes recogidos por San Eulogio.",
     "fuente": "",
     "extra": "Fuente: Diario AS.",
     "origen": "autor",
@@ -2396,8 +2396,8 @@
   {
     "fecha": "07-16",
     "anio": 1906,
-    "texto": "16 de julio de 1906, el Ayuntamiento acuerda rendir homenaje a la memoria del poeta cordobés Antonio Grilo.",
-    "fuente": "",
+    "texto": "16 de julio de 1906, el Ayuntamiento acuerda rendir homenaje a la memoria del poeta cordobés Antonio Fernández Grilo, fallecido en Madrid una semana antes. Conocido como el «poeta real» de Alfonso XII, su poema más famoso es «Las ermitas de Córdoba».",
+    "fuente": "https://es.wikipedia.org/wiki/Antonio_Fern%C3%A1ndez_Grilo",
     "extra": "Fuente: Diario de Córdoba, 17 de julio de 1906.",
     "origen": "autor",
     "verificada": true,
@@ -2432,8 +2432,8 @@
   {
     "fecha": "07-18",
     "anio": 1936,
-    "texto": "18 de julio de 1936, a las cuatro de la tarde, el coronel Ciriaco Cascajo proclama el bando de guerra, ordena cañonear el Gobierno Civil y detiene al gobernador Antonio Rodríguez de León. Córdoba queda en manos de los sublevados.",
-    "fuente": "",
+    "texto": "18 de julio de 1936, a las cuatro de la tarde, el coronel Ciriaco Cascajo, comandante militar de Córdoba, proclama el bando de guerra en apoyo de la sublevación, ordena cañonear el Gobierno Civil y detiene al gobernador Antonio Rodríguez de León. Córdoba queda en manos de los sublevados desde el primer día de la guerra.",
+    "fuente": "https://es.wikipedia.org/wiki/Ciriaco_Cascajo",
     "extra": "Fuente: foromemoriacordoba.org.",
     "origen": "autor",
     "verificada": true,
@@ -2609,7 +2609,7 @@
   {
     "fecha": "07-31",
     "anio": 1916,
-    "texto": "31 de julio de 1916, los cuarteles de la Victoria y San Rafael se entregan al Regimiento de la Reina.",
+    "texto": "31 de julio de 1916, los cuarteles de la Victoria y San Rafael se entregan al Regimiento de la Reina, al que en 1909 ya se le había asignado el cuartel de Alfonso XII.",
     "fuente": "",
     "extra": "Fuente: Diario de Córdoba, 1 de agosto de 1916.",
     "origen": "autor",
@@ -2873,8 +2873,8 @@
   {
     "fecha": "08-21",
     "anio": 890,
-    "texto": "21 de agosto de 890, muere en Córdoba el abad y teólogo mozárabe Sansón, autor del «Apologeticus». Su epitafio lo compuso Cipriano de Córdoba.",
-    "fuente": "",
+    "texto": "21 de agosto de 890, muere en Córdoba el abad Sansón, teólogo, poeta y traductor mozárabe. Dominaba el árabe y llegó a traducir la correspondencia del emir Muhammad I. Escribió el «Apologeticus» y su epitafio lo compuso el poeta Cipriano de Córdoba.",
+    "fuente": "https://es.wikipedia.org/wiki/Sans%C3%B3n_de_C%C3%B3rdoba",
     "extra": "Fuente: Historia del Condado de Castilla.",
     "origen": "autor",
     "verificada": true,
@@ -2886,7 +2886,7 @@
   {
     "fecha": "08-22",
     "anio": 1915,
-    "texto": "22 de agosto de 1915, se da por extinguido el gran incendio declarado hacia la una de la madrugada en el número 10 de la calle Librería, que llegó a alcanzar la calle Claudio Marcelo. La prensa critica la falta de un buen servicio de bomberos.",
+    "texto": "22 de agosto de 1915, se da por extinguido el gran incendio declarado hacia la una de la madrugada en el número 10 de la calle Librería, que llegó a alcanzar la calle Claudio Marcelo. La prensa critica la falta de un buen servicio de bomberos en la ciudad.",
     "fuente": "",
     "extra": "Fuente: Diario de Córdoba, 22 y 23 de agosto de 1915.",
     "origen": "autor",
@@ -2898,7 +2898,7 @@
   {
     "fecha": "08-22",
     "anio": 1936,
-    "texto": "22 de agosto de 1936, Córdoba sufre dos bombardeos aéreos, a las seis y a las once y media de la mañana, con bombas en la Corredera, la plaza de la República, Claudio Marcelo, las Margaritas y la plaza de toros, entre otras zonas. Muere el portero Apolinar Niza Mena y hay varios heridos.",
+    "texto": "22 de agosto de 1936, Córdoba sufre dos bombardeos aéreos, a las seis y a las once y media de la mañana, con bombas en la Corredera, la plaza de la República, Claudio Marcelo, las Margaritas y la plaza de toros, entre otras zonas. Muere el portero Apolinar Niza Mena y hay varios heridos. Los ataques de la aviación republicana sobre la ciudad se repetían desde finales de julio.",
     "fuente": "",
     "extra": "Fuente: prensa del bando sublevado, 23 de agosto de 1936.",
     "origen": "autor",
@@ -2911,7 +2911,7 @@
   {
     "fecha": "08-22",
     "anio": 1994,
-    "texto": "22 de agosto de 1994, se cierra la antigua estación de tren en superficie de Córdoba, con el único paso a nivel de la Alta Velocidad en España, para culminar el soterramiento de las vías antes de la apertura de Córdoba Central.",
+    "texto": "22 de agosto de 1994, se cierra la antigua estación de tren en superficie, con el único paso a nivel de la Alta Velocidad en España, para culminar el soterramiento de las vías que durante más de un siglo habían dividido Córdoba en dos. La nueva estación se inauguró el 9 de septiembre, y el antiguo edificio, abierto en 1859, es hoy sede de la RTVA.",
     "fuente": "",
     "extra": "Fuente: revista Carril.",
     "origen": "autor",
@@ -2931,6 +2931,19 @@
     "temas": [
       "Religión",
       "Sucesos"
+    ]
+  },
+  {
+    "fecha": "08-24",
+    "anio": 1927,
+    "texto": "24 de agosto de 1927, se inaugura en el Paseo de la Ribera el nuevo monumento de la Cruz del Rastro, obra de Carlos Sáenz de Santamaría y Antonio Castillo Ariza. Recuerda los sucesos de 1473, cuando una joven arrojó inmundicias sobre la imagen de la Virgen durante una procesión y la acusación contra los judíos desató cuatro días de persecuciones.",
+    "fuente": "",
+    "extra": "Fuente: Cordobapedia / Datta Capital.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Monumentos y urbanismo",
+      "Religión"
     ]
   },
   {
