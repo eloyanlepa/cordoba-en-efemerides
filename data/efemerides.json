@@ -2174,6 +2174,31 @@
     ]
   },
   {
+    "fecha": "07-03",
+    "anio": 1890,
+    "texto": "3 de julio de 1890, se subasta en el Ayuntamiento el alumbrado de petróleo para las calles de Córdoba que aún no tenían gas. El servicio se adjudica a Rafael Matute.",
+    "fuente": "",
+    "extra": "Fuente: Diario de Córdoba, 4 de julio de 1890.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Economía y vida cotidiana",
+      "Monumentos y urbanismo"
+    ]
+  },
+  {
+    "fecha": "07-03",
+    "anio": 1941,
+    "texto": "3 de julio de 1941, muere en Córdoba Ricardo de Montis, escritor, periodista y cronista oficial de la ciudad, autor de las «Notas cordobesas».",
+    "fuente": "",
+    "extra": "Fuente: Datta Capital / ateneodecordoba.com.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Arte y cultura"
+    ]
+  },
+  {
     "fecha": "07-04",
     "anio": 1917,
     "titulo": "Nace Manolete",
@@ -2182,6 +2207,31 @@
     "verificada": false,
     "temas": [
       "Toros"
+    ]
+  },
+  {
+    "fecha": "07-05",
+    "anio": 1916,
+    "texto": "5 de julio de 1916, se inaugura en el número 52 de la calle Alfonso XII la farmacia y laboratorios «El Globo», del farmacéutico Antonio Fuentes.",
+    "fuente": "",
+    "extra": "Fuente: Diario de Córdoba, 6 de julio de 1916.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Economía y vida cotidiana",
+      "Ciencia, salud y educación"
+    ]
+  },
+  {
+    "fecha": "07-06",
+    "anio": 1877,
+    "texto": "6 de julio de 1877, nace en Priego de Córdoba Niceto Alcalá-Zamora, que sería el primer presidente de la Segunda República (1931-1936).",
+    "fuente": "",
+    "extra": "Fuente: Datta Capital.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Política y gobierno"
     ]
   },
   {
@@ -2966,6 +3016,19 @@
     "verificada": true,
     "temas": [
       "Religión",
+      "Monumentos y urbanismo"
+    ]
+  },
+  {
+    "fecha": "09-18",
+    "anio": 1909,
+    "texto": "18 de septiembre de 1909, el cuartel de Alfonso XII pasa a manos del Regimiento de la Reina.",
+    "fuente": "",
+    "extra": "Fuente: Diario de Córdoba, 19 de septiembre de 1909.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Guerras y conflictos",
       "Monumentos y urbanismo"
     ]
   },
