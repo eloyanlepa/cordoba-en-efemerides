@@ -3966,6 +3966,43 @@
     ]
   },
   {
+    "fecha": "12-14",
+    "anio": 1911,
+    "texto": "14 de diciembre de 1911, nace en La Carlota Juan Bernier Luque, poeta, diarista y arqueólogo. Cofundador de la revista y grupo poético Cántico en la Córdoba de posguerra, recorrió la provincia localizando y catalogando numerosos yacimientos arqueológicos y recintos fortificados ibéricos.",
+    "fuente": "https://es.wikipedia.org/wiki/Juan_Bernier",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Arte y cultura"
+    ]
+  },
+  {
+    "fecha": "12-14",
+    "anio": 1917,
+    "texto": "14 de diciembre de 1917, el ministro de Fomento, el cordobés Niceto Alcalá-Zamora, comunica por telegrama al gobernador civil que el Consejo de Ministros ha aprobado sacar a subasta el ferrocarril de Puertollano a Córdoba, que acortaría el viaje a Madrid y abriría una amplia zona minera de la provincia.",
+    "fuente": "",
+    "extra": "Fuente: Diario de Córdoba, 15 de diciembre de 1917.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Economía y vida cotidiana",
+      "Política y gobierno"
+    ]
+  },
+  {
+    "fecha": "12-14",
+    "anio": 1932,
+    "texto": "14 de diciembre de 1932, estalla sin previo aviso una huelga ferroviaria en Córdoba: paran talleres, movimiento y carga y descarga en las estaciones de Córdoba y Cercadilla, y se suspenden algunos trenes de viajeros. La causa: la detención de cuatro ferroviarios por pegar en los vagones carteles que llamaban a la huelga.",
+    "fuente": "",
+    "extra": "Fuente: Diario de Córdoba, 15 de diciembre de 1932.",
+    "origen": "autor",
+    "verificada": true,
+    "temas": [
+      "Economía y vida cotidiana",
+      "Política y gobierno"
+    ]
+  },
+  {
     "fecha": "12-15",
     "anio": 1949,
     "texto": "15 de diciembre de 1949, se inaugura en Córdoba el Palacio del Cine sobre el antiguo frontón situado en la esquina de la calle Duque de Hornachuelos y plaza de las Tendillas.",
