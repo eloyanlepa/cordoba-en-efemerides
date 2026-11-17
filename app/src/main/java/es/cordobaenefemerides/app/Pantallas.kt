@@ -237,7 +237,6 @@ fun FilaEfemeride(e: Efemeride, favorita: Boolean, onAbrir: () -> Unit, onFavori
 fun PantallaCalendario(todas: List<Efemeride>, onAbrirDia: (LocalDate) -> Unit) {
     var mesTexto by rememberSaveable { mutableStateOf(YearMonth.now().toString()) }
     val mes = YearMonth.parse(mesTexto)
-    val porDia = remember(todas) { todas.groupBy { it.fecha } }
     val hoy = LocalDate.now()
 
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(12.dp)) {
@@ -271,7 +270,7 @@ fun PantallaCalendario(todas: List<Efemeride>, onAbrirDia: (LocalDate) -> Unit) 
                     Box(Modifier.weight(1f).aspectRatio(1f).padding(2.dp)) {
                         if (n in 1..mes.lengthOfMonth()) {
                             val fecha = mes.atDay(n)
-                            val lista = porDia["%02d-%02d".format(mes.monthValue, n)].orEmpty()
+                            val lista = Efemerides.delDia(todas, fecha)
                             CeldaDia(n, lista.size, lista.any { it.video.isNotBlank() }, fecha == hoy) {
                                 onAbrirDia(fecha)
                             }
