@@ -26,14 +26,13 @@ jobs:
       - name: Pruebas de la versión web
         run: node --test web/logica.test.mjs
 
-  publicar:
-    # Solo se publica lo que está en la rama main (no las pull requests).
+  # Solo se publica lo que está en la rama main (no las pull requests).
+  # Se hace en dos trabajos separados (preparar y publicar), como recomienda GitHub:
+  # si se publica en el mismo trabajo en que se sube la web, GitHub a veces aún no la encuentra.
+  preparar:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: probar
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.despliegue.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - name: Preparar la web con las efemérides actuales
@@ -44,5 +43,13 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
+
+  publicar:
+    needs: preparar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
       - id: despliegue
         uses: actions/deploy-pages@v4
