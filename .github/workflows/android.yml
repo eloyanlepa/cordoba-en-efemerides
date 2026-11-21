@@ -30,3 +30,43 @@ jobs:
         with:
           name: capturas-de-pantalla
           path: app/build/capturas/
+
+  tienda:
+    # Versión firmada para Google Play (.aab). Solo se fabrica en main y si la llave está guardada
+    # en los secretos del proyecto (Settings → Secrets and variables → Actions).
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: construir
+    runs-on: ubuntu-latest
+    env:
+      TIENE_LLAVE: ${{ secrets.FIRMA_ALMACEN_BASE64 != '' }}
+    steps:
+      - uses: actions/checkout@v4
+        if: env.TIENE_LLAVE == 'true'
+      - uses: actions/setup-java@v4
+        if: env.TIENE_LLAVE == 'true'
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+        if: env.TIENE_LLAVE == 'true'
+      - name: Fabricar la versión firmada para Google Play
+        if: env.TIENE_LLAVE == 'true'
+        env:
+          FIRMA_ALMACEN_BASE64: ${{ secrets.FIRMA_ALMACEN_BASE64 }}
+          FIRMA_CLAVE_ALMACEN: ${{ secrets.FIRMA_CLAVE_ALMACEN }}
+          FIRMA_ALIAS: ${{ secrets.FIRMA_ALIAS }}
+          FIRMA_CLAVE: ${{ secrets.FIRMA_CLAVE }}
+        run: |
+          echo "$FIRMA_ALMACEN_BASE64" | base64 -d > "$RUNNER_TEMP/subida.jks"
+          export FIRMA_ALMACEN="$RUNNER_TEMP/subida.jks"
+          ./gradlew bundleRelease
+          rm -f "$RUNNER_TEMP/subida.jks"
+      - name: Guardar la versión para Google Play (.aab)
+        if: env.TIENE_LLAVE == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: cordoba-en-efemerides-google-play
+          path: app/build/outputs/bundle/release/app-release.aab
+      - name: Aviso si falta la llave
+        if: env.TIENE_LLAVE != 'true'
+        run: echo "No hay llave de firma en los secretos del proyecto; no se fabrica la versión para Google Play."

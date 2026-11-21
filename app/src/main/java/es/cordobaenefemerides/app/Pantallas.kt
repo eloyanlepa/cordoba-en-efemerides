@@ -326,8 +326,9 @@ fun PantallaBuscar(
     favoritas: Set<String>,
     onAbrirDia: (LocalDate) -> Unit,
     onFavorita: (Efemeride) -> Unit,
+    consultaInicial: String = "",
 ) {
-    var consulta by rememberSaveable { mutableStateOf("") }
+    var consulta by rememberSaveable { mutableStateOf(consultaInicial) }
     var tema by rememberSaveable { mutableStateOf<String?>(null) }
     val temas = remember(todas) { Efemerides.temas(todas) }
     val resultados = remember(consulta, tema, todas) {

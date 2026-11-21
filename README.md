@@ -16,6 +16,12 @@ La carpeta [`web/`](web/) tiene una versión web instalable con lo mismo que la 
 
 Para probarla en el ordenador: `cp data/efemerides.json web/ && python3 -m http.server -d web` y abrir http://localhost:8000. Pruebas: `node --test web/logica.test.mjs`.
 
+## Google Play
+
+En [`tienda/`](tienda/) está todo lo necesario para la ficha de Google Play: textos y respuestas de los formularios ([`tienda/FICHA.md`](tienda/FICHA.md)), icono, gráfico destacado y capturas. La política de privacidad se publica en https://eloyanlepa.github.io/cordoba-en-efemerides/privacidad.html.
+
+La versión firmada para la tienda (`.aab`) la fabrica GitHub en cada cambio de `main`, si la llave de firma está guardada en los secretos del proyecto (`FIRMA_ALMACEN_BASE64`, `FIRMA_CLAVE_ALMACEN`, `FIRMA_ALIAS`, `FIRMA_CLAVE`).
+
 ## Qué hace la app de Android
 
 - **Hoy**: la efeméride del día, con botones para ir a otros días y elegir la hora del aviso (🔔).

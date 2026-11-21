@@ -93,13 +93,17 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun App() {
+fun App(
+    pestanaInicial: Pestana = Pestana.HOY,
+    diaInicial: LocalDate = LocalDate.now(),
+    consultaInicial: String = "",
+) {
     val contexto = LocalContext.current
     var todas by remember { mutableStateOf(Efemerides.todas(contexto)) }
     var favoritas by remember { mutableStateOf(Ajustes.favoritas(contexto)) }
     var escala by remember { mutableStateOf(Ajustes.escalaLetra(contexto)) }
-    var pestana by rememberSaveable { mutableStateOf(Pestana.HOY) }
-    var diaTexto by rememberSaveable { mutableStateOf(LocalDate.now().toString()) }
+    var pestana by rememberSaveable { mutableStateOf(pestanaInicial) }
+    var diaTexto by rememberSaveable { mutableStateOf(diaInicial.toString()) }
     var eligiendoLetra by remember { mutableStateOf(false) }
 
     // Al abrir la app se descarga la última versión de las efemérides desde GitHub.
@@ -151,7 +155,7 @@ fun App() {
                         onCambiarDia = { diaTexto = it.toString() }, onFavorita = cambiarFavorita,
                     )
                     Pestana.CALENDARIO -> PantallaCalendario(todas, onAbrirDia = abrirDia)
-                    Pestana.BUSCAR -> PantallaBuscar(todas, favoritas, onAbrirDia = abrirDia, onFavorita = cambiarFavorita)
+                    Pestana.BUSCAR -> PantallaBuscar(todas, favoritas, onAbrirDia = abrirDia, onFavorita = cambiarFavorita, consultaInicial = consultaInicial)
                     Pestana.FAVORITAS -> PantallaFavoritas(todas, favoritas, onAbrirDia = abrirDia, onFavorita = cambiarFavorita)
                     Pestana.JUEGO -> PantallaJuego(todas)
                 }

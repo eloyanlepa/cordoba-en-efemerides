@@ -6,14 +6,34 @@ plugins {
 
 android {
     namespace = "es.cordobaenefemerides.app"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "es.cordobaenefemerides.app"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 3
-        versionName = "0.3"
+        targetSdk = 36
+        versionCode = 4
+        versionName = "1.0"
+    }
+
+    // Firma para Google Play. La llave no está en el proyecto: GitHub la recibe de sus «secretos»
+    // (ver .github/workflows/android.yml). Sin ella se puede compilar todo menos la versión para la tienda.
+    val almacen = System.getenv("FIRMA_ALMACEN")
+    signingConfigs {
+        if (almacen != null) {
+            create("tienda") {
+                storeFile = file(almacen)
+                storePassword = System.getenv("FIRMA_CLAVE_ALMACEN")
+                keyAlias = System.getenv("FIRMA_ALIAS")
+                keyPassword = System.getenv("FIRMA_CLAVE")
+            }
+        }
+    }
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            if (almacen != null) signingConfig = signingConfigs.getByName("tienda")
+        }
     }
 
     // Las efemérides viven en /data, en la raíz del proyecto, y se empaquetan dentro de la app.
