@@ -1,0 +1,48 @@
+name: Publicar versión web
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Pruebas de la versión web
+        run: node --test web/logica.test.mjs
+
+  publicar:
+    # Solo se publica lo que está en la rama main (no las pull requests).
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: probar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preparar la web con las efemérides actuales
+        run: |
+          cp data/efemerides.json web/efemerides.json
+          rm web/logica.test.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - id: despliegue
+        uses: actions/deploy-pages@v4
