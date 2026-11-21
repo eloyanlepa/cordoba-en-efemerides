@@ -3,7 +3,20 @@
 App para Android que cada día muestra las efemérides de Córdoba (España) y envía un aviso por la mañana.
 Nace del hashtag #CórdobaEnEfemérides.
 
-## Qué hace
+## Versión web (iPhone y cualquier móvil)
+
+La carpeta [`web/`](web/) tiene una versión web instalable con lo mismo que la app de Android (salvo el aviso diario y el widget). Se publica sola en GitHub Pages con cada cambio en `main`:
+
+**https://eloyanlepa.github.io/cordoba-en-efemerides/**
+
+- En **iPhone**: abrirla en Safari → **Compartir** → **Añadir a pantalla de inicio**.
+- En **Android**: Chrome ofrece **Instalar aplicación**.
+- Usa el mismo `data/efemerides.json`, así que todo lo que se añada sale a la vez en la app y en la web.
+- Funciona sin conexión una vez abierta.
+
+Para probarla en el ordenador: `cp data/efemerides.json web/ && python3 -m http.server -d web` y abrir http://localhost:8000. Pruebas: `node --test web/logica.test.mjs`.
+
+## Qué hace la app de Android
 
 - **Hoy**: la efeméride del día, con botones para ir a otros días y elegir la hora del aviso (🔔).
 - **Calendario**: el mes completo; los días con efemérides salen en color y ▶ indica que tienen vídeo.
