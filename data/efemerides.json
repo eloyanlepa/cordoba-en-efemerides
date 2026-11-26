@@ -1162,8 +1162,8 @@
   {
     "fecha": "04-08",
     "anio": 1891,
-    "texto": "8 de abril de 1891, es nombrado alcalde de Córdoba D. Juan Tejón y Marín. Ingeniero militar, durante su mandato se urbanizaron los actuales jardines de Colón. En su honor existe una calle en la ciudad de Córdoba.",
-    "fuente": "",
+    "texto": "8 de abril de 1891, es nombrado alcalde de Córdoba D. Juan Tejón y Marín. Ingeniero militar, durante su mandato se proyectó la urbanización de los actuales jardines de Colón, aunque no pasó del proyecto. En su honor existe una calle en la ciudad de Córdoba.",
+    "fuente": "https://cordobapedia.datta.capital/wiki/Juan_Tej%C3%B3n_y_Mar%C3%ADn",
     "origen": "hoja",
     "verificada": true,
     "temas": [
@@ -4174,31 +4174,31 @@
   {
     "fecha": "12-07",
     "anio": 1958,
-    "texto": "7 de diciembre de 1958, se inaugura en Córdoba el cinema Cabrera. Impulsado por el empresario Antonio Cabrera y su hijo Francisco se situaba en la calle Julio Pellicer en el barrio de Ciudad Jardín.",
+    "texto": "7 de diciembre de 1958, se inaugura en Córdoba el cinema Cabrera. Impulsado por el empresario Antonio Cabrera y su hijo Francisco, se situaba en la calle Julio Pellicer, en el barrio de Ciudad Jardín. Se sumaba a salas del centro como el Góngora (1932) o el Palacio del Cine (1949) y acercaba el cine a un barrio alejado del casco histórico.",
     "fuente": "",
     "origen": "hoja",
     "verificada": true,
     "temas": [
       "Arte y cultura",
-      "Monumentos y urbanismo"
+      "Economía y vida cotidiana"
     ]
   },
   {
     "fecha": "12-08",
     "anio": 1512,
-    "texto": "8 de diciembre de 1512, por escritura se acuerda la construcción de la plaza de S. Agustín sobre el antiguo compás del convento del mismo nombre. De planta cuadrangular, en ella se situó un importante mercado hasta bien entrado el siglo XX.",
+    "texto": "8 de diciembre de 1512, por escritura se acuerda la construcción de la plaza de San Agustín sobre el antiguo compás, el espacio abierto ante el convento del mismo nombre. De planta cuadrangular, en ella se situó un importante mercado hasta bien entrado el siglo XX. En la plaza se alza la iglesia de San Agustín, sede de la Virgen de las Angustias de Juan de Mesa.",
     "fuente": "",
     "origen": "hoja",
     "verificada": true,
     "temas": [
       "Monumentos y urbanismo",
-      "Religión"
+      "Economía y vida cotidiana"
     ]
   },
   {
     "fecha": "12-09",
     "anio": 1635,
-    "texto": "9 de diciembre de 1635, es nombrado Caballero de la Orden de Calatrava y 24 de Córdoba, D. Francisco de las Infantas y Aguayo, fundador de la Orden de Santo Domingo de Silos y del hospital de Convalecientes que se encontraba donde se sitúa hoy en día la filmoteca. El hospital de S. Sebastián fue el más antiguo de la ciudad.",
+    "texto": "9 de diciembre de 1635, es nombrado caballero de la Orden de Calatrava y veinticuatro (regidor) de Córdoba D. Francisco de las Infantas y Aguayo, fundador del hospital de Convalecientes, que se encontraba donde hoy está la Filmoteca de Andalucía. No era el primer hospital de la ciudad: le precedieron otros como el de Nuestra Señora de Guía, el primero tras la reconquista, o el de San Sebastián, fundado en 1363.",
     "fuente": "",
     "origen": "hoja",
     "verificada": true,
@@ -4210,8 +4210,8 @@
   {
     "fecha": "12-10",
     "anio": 1198,
-    "texto": "10 de diciembre de 1198, fallece en Marruecos el filósofo y médico cordobés Abu Al-Walid Muhammad Ibn Ahmad Ibn Rushd, Averroes, que llegó a ser cadí mayor de Córdoba.",
-    "fuente": "",
+    "texto": "10 de diciembre de 1198, fallece en Marrakech el filósofo y médico cordobés Abu al-Walid Muhammad ibn Ahmad ibn Rushd, Averroes. Fue cadí mayor de Córdoba, como antes lo había sido su abuelo, y sus comentarios sobre Aristóteles le valieron en Occidente el sobrenombre de «el Comentador».",
+    "fuente": "https://es.wikipedia.org/wiki/Averroes",
     "origen": "hoja",
     "verificada": true,
     "temas": [
@@ -4222,8 +4222,8 @@
   {
     "fecha": "12-11",
     "anio": 1701,
-    "texto": "11 de diciembre de 1701, unos molineros encuentran un Niño Jesús en el río Guadalquivir, siendo donado al convento de la Encarnación que había sido fundado en 1503 al donar su casa para un beaterío el canónigo D. Antón Ruiz de Morales.",
-    "fuente": "",
+    "texto": "11 de diciembre de 1701, unos molineros encuentran en el Guadalquivir una imagen del Niño Jesús, que es donada al convento de la Encarnación. Este convento cisterciense nació del beaterío creado en 1503 en la casa que legó el canónigo Antón Ruiz de Morales, y en 1509 se convirtió en convento por bula del papa Julio II.",
+    "fuente": "https://cordobapedia.datta.capital/wiki/Convento_de_la_Encarnaci%C3%B3n",
     "origen": "hoja",
     "verificada": true,
     "temas": [
